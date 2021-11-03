@@ -19,9 +19,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             BasicCodelab_jsleeTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
+//                Surface(color = MaterialTheme.colors.background) {
+//                    Greeting("Android")
+//                }
+                MyApp()
             }
         }
     }
@@ -39,5 +40,12 @@ fun Greeting(name: String) {
 fun DefaultPreview() {
     BasicCodelab_jsleeTheme {
         Greeting("Android")
+    }
+}
+
+@Composable
+private fun MyApp() {
+    Surface(color = MaterialTheme.colors.background) {
+        Greeting(name = "Android")
     }
 }
