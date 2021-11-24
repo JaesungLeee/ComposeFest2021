@@ -37,6 +37,15 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
+fun Button(
+    modifier: Modifier = Modifier,
+    onClick: (() -> Unit)? = null,
+    content: @Composable () -> Unit  // 람다를 취하는 Button API를 활용해 Composable을 정의할 수 있다.
+) {
+
+}
+
+@Composable
 fun PhotographerCard() {
     Row(
         modifier = Modifier
